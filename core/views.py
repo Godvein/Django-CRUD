@@ -11,3 +11,10 @@ def insertData(request):
         query = Student(name = name, email = email)
         query.save()
     return render(request, "index.html")    
+
+def viewData(request):
+    studentdata = Student.objects.all()
+    data = {
+        "studentdata" : studentdata
+    }
+    return render(request, "viewdata.html", data)

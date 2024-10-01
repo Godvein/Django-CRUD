@@ -3,5 +3,6 @@ from core import views
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('insert/', views.insertData, name = 'insert')
+    path('insert/', views.insertData, name = 'insert'),
+    path('viewdata/', views.viewData, name = 'viewdata'),
 ]

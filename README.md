@@ -21,8 +21,8 @@ The project is still in development. Below is a breakdown of the current progres
 - [x] Set up the Django project structure.
 - [x] Basic configuration and installation.
 - [x] Defined the **Student** model.
-- [ ] Create functionality (in progress).
-- [ ] Read functionality (in progress).
+- [x] Create functionality.
+- [x] Read functionality.
 - [ ] Update functionality (pending).
 - [ ] Delete functionality (pending).
 
