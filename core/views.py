@@ -37,8 +37,6 @@ def updateData(request, id):
     return render(request, "updatedata.html", data)
 
 def deleteData(request, id):
-    studentdata = Student.objects.all()
-    data = {
-        "studentdata" : studentdata
-    }
-    return render(request, "viewdata.html", data)
+    d = Student.objects.get(id = id)
+    d.delete()
+    return redirect("/viewdata/")
