@@ -18,6 +18,8 @@
             <div class="fw-bold">{{d.name}}</div>
             {{d.email}}
           </div>
+          <button><a type="button" href="/deletedata/{{d.id}}" class="btn btn-outline-danger">Delete</a></button>
+          <button><a type="button" href="/updatedata/{{d.id}}" class="btn btn-outline-info">Update</a></button>
         </li>
         {% endfor %}
       </ol>
