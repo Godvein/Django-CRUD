@@ -10,5 +10,4 @@ def insertData(request):
         email = request.POST.get("Email")
         query = Student(name = name, email = email)
         query.save()
-        print(name, email)
     return render(request, "index.html")    
