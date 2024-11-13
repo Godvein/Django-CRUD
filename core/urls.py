@@ -7,4 +7,7 @@ urlpatterns = [
     path('viewdata/', views.viewData, name = 'viewdata'),
     path('updatedata/<id>/', views.updateData, name = 'updatedata'),
     path('deletedata/<id>/', views.deleteData, name = 'deletedata'),
+
+    #API
+    path('api/', views.ApiListViewCreate.as_view(), name='apiview')
 ]
