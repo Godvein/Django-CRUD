@@ -9,5 +9,6 @@ urlpatterns = [
     path('deletedata/<id>/', views.deleteData, name = 'deletedata'),
 
     #API
-    path('api/', views.ApiListViewCreate.as_view(), name='apiview')
+    path('api/', views.ApiListViewCreate.as_view(), name='apiview'),
+    path('api/<int:pk>/', views.ApiRetrieveUpdateDestroy.as_view(), name = 'retrieveupdatedestroy')
 ]

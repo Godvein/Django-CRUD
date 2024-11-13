@@ -47,4 +47,9 @@ from .serializers import StudentSerializer
 class ApiListViewCreate(generics.ListCreateAPIView):
     queryset = Student.objects.all()
     serializer_class = StudentSerializer
+
+class ApiRetrieveUpdateDestroy(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Student.objects.all()
+    serializer_class = StudentSerializer
+    lookup_field = "pk"
     
