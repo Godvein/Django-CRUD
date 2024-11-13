@@ -41,12 +41,18 @@ def deleteData(request, id):
     d.delete()
     return redirect("/viewdata/")
 
-from rest_framework import generics
+from rest_framework import generics, status
+from rest_framework.response import Response
 from .serializers import StudentSerializer
 #api view
 class ApiListViewCreate(generics.ListCreateAPIView):
     queryset = Student.objects.all()
     serializer_class = StudentSerializer
+
+    #custom delete all function
+    def delete(self, request, *args, **kwargs):
+        Student.objects.all().delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)
 
 class ApiRetrieveUpdateDestroy(generics.RetrieveUpdateDestroyAPIView):
     queryset = Student.objects.all()
